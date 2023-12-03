@@ -1,0 +1,24 @@
+{
+  "recommendations": [
+    "vue.volar",
+    "antfu.unocss",
+    "rvest.vs-code-prettier-eslint",
+    "nuxtr.nuxtr-vscode",
+    "nuxt.mdc",
+    "wix.vscode-import-cost",
+    "antfu.iconify",
+    "dbaeumer.vscode-eslint",
+    "kamikillerto.vscode-colorize",
+    "antfu.browse-lite",
+    "vue.vscode-typescript-vue-plugin",
+    "albert.tabout",
+    "esbenp.prettier-vscode",
+    "christian-kohler.path-intellisense",
+    "ibm.output-colorizer",
+    "christian-kohler.npm-intellisense",
+    "usernamehw.errorlens",
+    "igorsbitnev.error-gutters",
+    "vunguyentuan.vscode-css-variables",
+    "antfu.goto-alias"
+  ]
+}

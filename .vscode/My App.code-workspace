@@ -1,0 +1,27 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "editor.indentSize": 2,
+    "files.autoSave": "onFocusChange",
+    "editor.codeActionsOnSave": ["source.fixAll.format", "source.fixAll.eslint"],
+    "explorer.fileNesting.enabled": true,
+    "[vue]": {
+      "editor.indentSize": 2,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "explorer.fileNesting.patterns": {
+      "*.vue": "${capture}.story.vue, ${capture}.test.ts, ${capture}.spec.ts",
+      "tsconfig.json": "tsconfig.*.json",
+      "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml"
+    },
+    "workbench.editorAssociations": {
+        "*.md": "cweijan.markdownViewer",
+        "*.ipynb": "jupyter-notebook",
+        "git-rebase-todo": "gitlens.rebase"
+    },
+  },
+}

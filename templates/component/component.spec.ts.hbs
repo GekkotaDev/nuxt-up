@@ -1,0 +1,15 @@
+import { describe, it } from "vitest";
+import { setup } from "@nuxt/test-utils";
+import { mount } from "@vue/test-utils";
+
+describe("<{{pascalCase name}}/> component", async () => {
+  await setup({});
+
+  const component = mount({{pascalCase name}}, {
+    props: {},
+  });
+
+  it("…", () => {});
+
+  component.unmount();
+});

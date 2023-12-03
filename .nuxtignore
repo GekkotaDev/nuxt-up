@@ -1,0 +1,6 @@
+# Vitest
+*.spec.*
+*.test.*
+
+# Histoire
+*.story.*

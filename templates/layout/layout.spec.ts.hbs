@@ -1,0 +1,15 @@
+import { describe, it } from "vitest";
+import { setup } from "@nuxt/test-utils";
+import { mount } from "@vue/test-utils";
+
+describe("<{{pascalCase name}}/> layout", async () => {
+  await setup({});
+
+  const layout = mount({{pascalCase name}}, {
+    props: {},
+  });
+
+  it("…", () => {});
+
+  layout.unmount();
+});
