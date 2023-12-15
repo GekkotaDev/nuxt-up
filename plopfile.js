@@ -22,7 +22,7 @@ export default (
       {
         type: "add",
         templateFile: "templates/component/index.vue.hbs",
-        path: "components/{{subdirectory}}/{{pascalCase name}}/index.vue",
+        path: "components/{{subdirectory}}/{{pascalCase name}}/{{pascalCase name}}.vue",
       },
       {
         type: "add",
@@ -57,13 +57,43 @@ export default (
     actions: [
       {
         type: "add",
-        templateFile: "templates/component/index.ts.hbs",
-        path: "composables/{{subdirectory}}/{{kebabCase name}}/index.ts",
+        templateFile: "templates/composable/index.ts.hbs",
+        path: "composables/{{subdirectory}}/{{kebabCase name}}.ts",
       },
       {
         type: "add",
-        templateFile: "templates/component/component.spec.ts.hbs",
+        templateFile: "templates/composable/component.spec.ts.hbs",
         path: "composables/{{subdirectory}}/{{kebabCase name}}/{{kebabCase name}}.spec.ts",
+      },
+    ],
+  });
+
+  plop.setGenerator("context", {
+    description: "Application context",
+    prompts: [
+      {
+        default: "/",
+        name: "subdirectory",
+        type: "input",
+        message:
+          "Which subdirectory should your context be in? (optional, case sensitive)",
+      },
+      {
+        name: "name",
+        type: "input",
+        message: "Name of your context.",
+      },
+    ],
+    actions: [
+      {
+        type: "add",
+        templateFile: "templates/context/context.ts.hbs",
+        path: "composables/{{subdirectory}}/{{kebabCase name}}-context.ts",
+      },
+      {
+        type: "add",
+        templateFile: "templates/context/context.spec.ts.hbs",
+        path: "composables/{{subdirectory}}/{{kebabCase name}}/{{kebabCase name}}-context.spec.ts",
       },
     ],
   });
@@ -88,7 +118,7 @@ export default (
       {
         type: "add",
         templateFile: "templates/layout/index.vue.hbs",
-        path: "layouts/{{subdirectory}}/{{pascalCase name}}/index.vue",
+        path: "layouts/{{subdirectory}}/{{pascalCase name}}/{{pascalCase name}}.vue",
       },
       {
         type: "add",
@@ -102,4 +132,29 @@ export default (
       },
     ],
   });
+
+  /*
+  plop.setGenerator("page", {
+    description: "Nuxt Page.",
+    prompts: [
+      {
+        name: "route",
+        type: "input",
+        message: "Page route.",
+      },
+    ],
+    actions: [
+      {
+        type: "add",
+        templateFile: "templates/page/page.spec.ts.hbs",
+        path: "layouts/{{subdirectory}}/{{kebabCase name}}/{{kebabCase name}}.spec.ts",
+      },
+      {
+        type: "add",
+        templateFile: "templates/page/page.vue.hbs",
+        path: "layouts/{{subdirectory}}/{{kebabCase name}}/{{kebabCase name}}.vue",
+      },
+    ],
+  });
+  */
 };
