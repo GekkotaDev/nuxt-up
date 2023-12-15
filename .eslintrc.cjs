@@ -39,6 +39,8 @@ module.exports = {
     "unicorn",
   ],
   rules: {
+    "import/named": 0,
+    "import/no-unresolved": 0,
     "simple-import-sort/imports": "warn",
     "simple-import-sort/exports": "warn",
     //! Better safe than sorry.
