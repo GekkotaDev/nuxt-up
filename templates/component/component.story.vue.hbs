@@ -1,11 +1,10 @@
 <script setup lang="ts"></script>
 
-<template>
-  <Story>
-    <template #controls> </template>
+<template lang="pug">
+Story
+  template(#controls)/
 
-    <{{pascalCase name}} />
-  </Story>
+  {{pascalCase name}}/
 </template>
 
 <docs lang="md">
